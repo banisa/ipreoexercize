@@ -1,0 +1,32 @@
+<div class="pageHost">
+    <div>
+        <h3>Welcome {{clientFullName}}</h3>
+      </div>
+      
+      <h4>Edit Permissions</h4>
+      
+      <div class="indexGrid"> 
+        <form #frm = "ngForm" (ngSubmit)="updatePermissions()">
+            <table class="tblWidth">
+                <tr>
+                 <th></th>
+                 <th *ngFor="let dataHeader of userData;">
+                    {{dataHeader.Ticker}}                     
+                  </th>
+                </tr>
+                <tr *ngFor="let user of users;">
+                  <td>{{user.FullName}}</td>
+                  <td *ngFor="let userIndex of user.Indexes; let i = index">     
+                      <label class="container">
+                          <input type="checkbox" checked={{userIndex|hasPermission:userIndex}}  (change)="getFormChanges(user,userIndex, i)" >
+                          <span class="checkmark"></span>
+                        </label>               
+                  </td>
+                </tr>   
+              </table>
+             <div style="padding-top:10px;"> <button type="submit" name="button" class="btn btn-primary">Update Permission</button> </div>
+        </form> 
+      </div>
+</div>
+  
+<p><a routerLink="/">Logout</a></p>

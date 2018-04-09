@@ -1,0 +1,17 @@
+
+  <form #frm = "ngForm" (ngSubmit)="loginUser(frm)">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="username" name="username" class="form-control" ngModel/>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" name="pwd" ngModel/>
+    </div>
+    <button type="submit" class="btn btn-default">Login</button>
+
+    <div>
+      <span class="label label-danger">{{errMsg}}</span> 
+    </div>
+  </form>
+

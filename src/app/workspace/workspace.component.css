@@ -1,0 +1,21 @@
+.indexGrid{
+    padding-top: 10px;
+    padding-right: 40%
+}
+
+.tblWidth{
+    width: 100%;
+}
+
+.pageHost{
+    padding: 10px;
+}
+
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}

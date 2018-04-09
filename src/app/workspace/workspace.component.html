@@ -1,0 +1,26 @@
+
+<div class="pageHost">
+    <div>
+        <h3>Welcome {{clientFullName}}</h3>
+      </div>
+      
+      <h4>Indexes</h4>
+      
+      <div class="indexGrid">
+      
+        <table class="tblWidth">
+          <tr>
+            <th>Index</th>
+            <th>Ticker</th>
+            <th>Price</th>
+          </tr>
+          <tr *ngFor="let data of userData;">
+            <td>{{data.Index}}</td>
+            <td>{{data.Ticker}}</td>
+            <td>{{data.Price}}</td>
+          </tr>   
+        </table>      
+      </div>
+</div>
+
+<p><a routerLink="/">Logout</a></p>
